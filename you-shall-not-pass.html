@@ -1,0 +1,84 @@
+<meta charset="UTF-8">
+<script>
+    // SWITCH CASE SWITCH CASE SWITCH CASE SWITCH CASE fabio lindo
+    /*
+    Problema: Considere que uma pessoa está diante de uma máquina de compra, que possui para venda algumas bebidas distintas, tais como:
+
+    Refrigerante (RF): R$ 4,50
+    Água Sem Gás (AS): R$ 2,90
+    Água Com Gás (AC): R$ 3,00
+    Suco Natural (SN): R$ 3,90
+    
+    O usuário informará uma das opções citadas acima para compra.
+    Pergunte também a forma de pagamento.
+     Caso a forma de pagamento seja em dinheiro (D), e a bebida foi ou refrigerante ou suco natural, haverá desconto de 20%. 
+     Contudo, caso a forma de pagamento seja no Cartão (C), e a bebida foi água (Com ou Sem Gás), haverá desconto de apenas 10%. 
+     
+     Para as demais opções, não haverá desconto no preço.
+    Apresente o resultado final a ser pago pelo comprador da bebida.
+    */
+
+    const bebidas = prompt("Qual opção deseja comprar? Refrigerante(RF) R$ 4,50 | Água Sem Gás(AS)  R$ 2,90 | Água Com Gás(AC) R$ 3,00 | Suco Natural(SN) R$ 3,90 ").toUpperCase();
+    const pagamento = prompt("Qual a forma de pagameto? Dinhero(D) | Cartão(C) | ").toUpperCase();
+    
+    let refri = 4.5
+    let aguaSgas = 2.9
+    let aguaGas = 3
+    let suco = 3.9 
+
+    soma = 0;
+    switch (bebidas) {
+        case "RF":
+            soma + 1
+            break;
+         case "AS":
+            soma + 2
+            break;
+        case "AC":
+            soma + 3
+            break;
+            case "SN":
+                soma + 4
+        default:
+            break;
+    }
+
+    switch (pagamento ) {
+        case "D":
+            switch (bebidas) {
+                case "RF":
+                    document.write(`Desconto de 20%, ${refri * 0.80 .toFixed(2)} reais`)
+                    break;
+                case "SN":
+                document.write(`Desconto de 20%, ${suco * 0.80 .toFixed(2)} reais`)
+            }    
+            break;
+        case "C":  
+        switch (bebidas) {
+            case "AS":
+            document.write(`Desconto de 10%, ${aguaSgas * 0.90 .toFixed(2)} reais`)
+                break;
+                case "AC":
+                document.write(`Desconto de 10%, ${aguaGas * 0.90 .toFixed(2)} reais`)
+        }
+    }
+    switch (soma) {
+        case 1 :
+            document.write(`Não tem desconto, ${refri .toFixed(2)} reais `)
+            break;
+    case 2:
+    document.write(`Não tem desconto, ${aguaSgas .toFixed(2)} reais`)
+    break;
+    case 3:
+    document.write(`Não tem desconto, ${ aguaGas.toFixed(2)} reais`)
+    break;
+    case 4:
+    document.write(`Não tem desconto, ${ suco.toFixed(2)} reais`)
+
+        default:
+            break;
+    }
+ //ta dando errado, preguiça de terminar
+
+
+</script>
